@@ -20,11 +20,11 @@ public class DontForgetTheLyrics {
 	
 	public static void main(String[] args) {
 		// 4. Make a pop-up to explain the game.
-
+		JOptionPane.showMessageDialog(null, "To play this game I will start to play a song and you have to guess the rest of the lyrics. Got it?");
 		// 5. Use the playSound method to play your song.
-
+		playSound( "Ding Dang Kaarti Hai.wav") ;
 		// 6. Make a pop-up for the player to type their answer.
-
+JOptionPane.showInputDialog("Type in your answer");
 		// 7. If they answered correctly, tell them that they were right.
 
 		// 8. Otherwise, tell them they are wrong, and give them the answer.
@@ -39,5 +39,4 @@ public class DontForgetTheLyrics {
 		audioClip.play();
 	}
 }
-
 
