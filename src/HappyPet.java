@@ -7,14 +7,17 @@ public class HappyPet {
 	
 	public static void main(String[] args) {
 		// 1. Ask the user what kind of pet they want to buy, and store their answer in a variable
-
+String Pet = JOptionPane.showInputDialog("What kind of pet do you want to buy?");
+ int happinessLevel = 0;  
 		// 7. REPEAT steps 3 - 6 enough times to make your pet happy!
 		
 			// 3. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
-			int task = JOptionPane.showOptionDialog(null, "Question", "Title", 0, JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "Button1", "Button2", "Button3" }, null);
+ 
+		
+			int task = JOptionPane.showOptionDialog(null, "What do you want to do to make your pet happy?", "petHappiness", 0, JOptionPane.INFORMATION_MESSAGE, null,
+					new String[] { "Cuddle", "Bathe", "Groom" }, null);
 
 			// 5. Use user input to call the appropriate method created in step 4.
 
@@ -24,6 +27,9 @@ public class HappyPet {
 	}
 
 	// 4. Create methods to handle each of your user selections.
+public void Cuddle()  {
+
 	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 
 	//    and INCREMENT the pet's happiness Level.
+}
 }

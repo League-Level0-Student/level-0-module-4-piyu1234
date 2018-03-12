@@ -23,7 +23,7 @@ public class FruitQuiz extends KeyAdapter {
 	public void keyPressed(KeyEvent arg0) {
 		int keyCode = arg0.getKeyCode();
 		// 1. Print out the key code variable
-System. out.println(keyCode);
+//System. out.println(keyCode);
 		// 2. Make 3 int variables that hold the key codes for A, B, and C
 int key1= 65;
 int key2 = 66;
@@ -35,29 +35,42 @@ int key3 = 67;
 			// 13. check if it is right or wrong like you did for question1
 		
 			
-		if (question1.isShowing()) {
+		if (question1.isShowing()){
 			// 3. If they selected the right fruit, do steps 4 and 7
 			if (keyCode == 66) {
 		correct();	
 		
 			}
 			else { incorrect();}
+			
+		}  
 				// 4. Call the correct() method
-				
+			
 				// 7. Use the nextQuestion() method to go to question2
 			nextQuestion(question2);
-			
-			// 8. else (if they touched something else)
-				
-				// 9. Call the incorrect() method
+			if (question2.isShowing())  {   
 		
+	if (keyCode == 67) {
+		
+		correct();
+		
+			}
+		
+
+			// 8. else (if they touched something else)
+	
+				// 9. Call the incorrect() method
+	else { incorrect();}
+		}
+			
 		}
 
-	}
-
+	
+	
 	private void correct() {
 		// 5. Find a sound for when they get a question right, and drag it into
-		// the default package. It must be a .wav file. 
+	   // the default package. It must be a .wav file.cc
+		
 		// There are lots on freesound.org
 		// 6. Use the playSound method to play your sound
 		playSound("correct.wav"); 
@@ -72,8 +85,8 @@ int key3 = 67;
 	private void nextQuestion(JLabel newQuestion) {
 		frame.remove(question1);
 		frame.remove(question2);
-		frame.remove(question3);
-		frame.remove(question4);
+		//frame.remove(question3);
+		//frame.remove(question4);
 		frame.add(newQuestion);
 		frame.pack();
 		frame.setVisible(true);
