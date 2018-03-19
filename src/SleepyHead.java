@@ -16,7 +16,17 @@ public class SleepyHead {
          * JOptionPane.showConfirmDialog(null, "is it a weekday?", "",
          * JOptionPane.YES_NO_OPTION);
          */
-    
+     
+  int day = JOptionPane.showConfirmDialog(null, "is it a weekday?");
+        if (day == 0) {
+            JOptionPane.showMessageDialog(null, "Get up lazybones!");
+           
+        }
+        
+     else   if (day == 1) {
+            JOptionPane.showMessageDialog(null, "sleep in!");
+           
+        }
 
 
         /*
